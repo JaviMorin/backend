@@ -2,6 +2,6 @@ POST http://localhost:3001/api/notes
 Content-Type: application/json
 
 {
-    "content": "POSTMAN es una buena aplicación para probar API REST",
+    "content": "VS Code REST client",
     "important": true
 }
