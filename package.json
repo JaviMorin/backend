@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "test": "jest --verbose",
     "build:ui": "rm -rf build && cd ../example/ && npm run build --prod && cp -r build ../backend/",
     "deploy": "git push heroku HEAD:master",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
@@ -22,6 +22,10 @@
     "mongoose": "^6.6.1"
   },
   "devDependencies": {
+    "jest": "^29.1.2",
     "nodemon": "^2.0.19"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
